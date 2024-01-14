@@ -8,5 +8,5 @@
         height="{{ .Height }}" />
     {{ end }}
     <h2 class="author-name">{{ .Site.Params.author.intro }}</h2>
-    <p class="author-bio">{{ .Site.Params.author.description }}</p>
+    <p class="author-bio">{{ safeHTML .Site.Params.author.description }}</p>
 </div>
