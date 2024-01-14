@@ -3,6 +3,8 @@ license = "MIT"
 licenselink = "https://github.com/hugo-sid/hugo-blog-awesome/blob/main/LICENSE"
 description = "Minimal Hugo blog theme with light and dark mode support"
 
+defaultContentLanguage=en
+
 # The home page of the theme, where the source can be found.
 homepage = "https://github.com/hugo-sid/hugo-blog-awesome/"
 

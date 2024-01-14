@@ -26,7 +26,7 @@ To enable ToC on all posts (globally) set parameter `toc` to `true` in `config.t
 ```
 
 To disable ToC globally, simply ignore the `toc` parameter or set it to `false`.
- 
+
 ## Enable table of content on certain posts
 
 To enable ToC on certain posts set parameter `toc` to `true` in post settings.

@@ -1,7 +1,7 @@
 ## HOME ##
 - id: "home.home"
   translation: "Home"
-  
+
 - id: "home.recent_posts"
   translation: "Recent Posts"
 
@@ -11,6 +11,9 @@
 ## SINGLE ##
 - id: "single.table_of_contents"
   translation: "Table of Contents"
+
+- id: "single.related_tags"
+  translation: "Related with: "
 
 ## FOOTER ##
 - id: "footer.go_to_top"
