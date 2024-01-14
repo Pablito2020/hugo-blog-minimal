@@ -1,13 +1,20 @@
 {{- range . }}
-    <!-- TODO: change english for the default language from the config -->
-    {{ $currentLanguage := site.Language.Lang }}
-    {{ if and (eq .name "rss") (not (eq $currentLanguage "en")) }}
-    <a href="/{{$currentLanguage}}/{{.url}}"
-            title="{{ (.Title | default .Name) | title }}">
-            {{ partial "svgs/svgs.html" . }}
-        </a>
+    {{ if (eq .name "rss") }}
+        {{ $currentLanguage := site.Language.Lang }}
+        <!-- TODO: change english for the default language from the config -->
+        {{ if not (eq $currentLanguage "en") }}
+            <a href="/{{$currentLanguage}}/{{.url}}"
+                title="{{ (.Title | default .Name) | title }}">
+                {{ partial "svgs/svgs.html" . }}
+            </a>
+        {{ else }}
+            <a href="/{{.url}}" target="_blank" rel="noopener noreferrer me canonical"
+                title="{{ (.Title | default .Name) | title }}">
+                {{ partial "svgs/svgs.html" . }}
+            </a>
+        {{end}}
     {{ else }}
-        <a href="/{{.url}}" target="_blank" rel="noopener noreferrer me canonical"
+        <a href="{{.url}}" target="_blank" rel="noopener noreferrer me canonical"
             title="{{ (.Title | default .Name) | title }}">
             {{ partial "svgs/svgs.html" . }}
         </a>
