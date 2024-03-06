@@ -9,17 +9,20 @@ theme = "hugo-blog-awesome"
 # This defines how dates are formatted
 defaultContentLanguage = "en-gb"
 
-# To enable Google Analytics 4 (gtag.js) provide G-MEASUREMENT_ID below.
-# To disable Google Analytics, simply leave the field empty or remove the next line
-googleAnalytics = '' # G-MEASUREMENT_ID
-
 # Enable emojis globally
 enableEmoji = true
 ignoreErrors = ["additional-script-loading-error"] # ignore error of loading additional scripts.
 
+[services]
+# To enable Google Analytics 4 (gtag.js) provide G-MEASUREMENT_ID below.
+# To disable Google Analytics, simply leave the field empty or remove the next two lines
+  [services.googleAnalytics]
+    id = '' # G-MEASUREMENT_ID
+
 # To enable Disqus comments, provide Disqus Shortname below.
-# To disable Disqus comments, simply leave the field empty or remove the next line
-disqusShortname = ''
+# To disable Disqus comments, simply leave the field empty or remove the next two lines
+  [services.disqus]
+    shortname = ''
 
 # set markup.highlight.noClasses=false to enable code highlight
 [markup]
@@ -71,7 +74,7 @@ disqusShortname = ''
   goToTop = true # set to false to disable 'go to top' button
   additionalScripts = ['js/custom.js', 'js/custom-2.js']
   # Will try to load 'assets/js/custom.js' and 'assets/js/custom-2.js'.
-  # Your custom scripts will be concatinated to one file `custom.js`.
+  # Your custom scripts will be concatenated to one file `custom.js`.
   # When building for production it will be minified.
   # The file `custom.js` is loaded on each page (before body tag ends).
   dateFormat = "" # date format used to show dates on various pages. If nothing is specified, then "2 Jan 2006" format is used.
@@ -135,7 +138,7 @@ disqusShortname = ''
   goToTop = true # set to false to disable 'go to top' button
   additionalScripts = ['js/custom.js', 'js/custom-2.js']
   # Will try to load 'assets/js/custom.js' and 'assets/js/custom-2.js'.
-  # Your custom scripts will be concatinated to one file `custom.js`.
+  # Your custom scripts will be concatenated to one file `custom.js`.
   # When building for production it will be minified.
   # The file `custom.js` is loaded on each page (before body tag ends).
   dateFormat = "2 January 2006" # default date format used on various pages
@@ -200,7 +203,7 @@ disqusShortname = ''
   goToTop = true # set to false to disable 'go to top' button
   additionalScripts = ['js/custom.js', 'js/custom-2.js']
   # Will try to load 'assets/js/custom.js' and 'assets/js/custom-2.js'.
-  # Your custom scripts will be concatinated to one file `custom.js`.
+  # Your custom scripts will be concatenated to one file `custom.js`.
   # When building for production it will be minified.
   # The file `custom.js` is loaded on each page (before body tag ends).
   dateFormat = "" # date format used to show dates on various pages. If nothing is specified, then "2 Jan 2006" format is used.
@@ -265,7 +268,7 @@ disqusShortname = ''
   goToTop = true # set to false to disable 'go to top' button
   additionalScripts = ['js/custom.js', 'js/custom-2.js']
   # Will try to load 'assets/js/custom.js' and 'assets/js/custom-2.js'.
-  # Your custom scripts will be concatinated to one file `custom.js`.
+  # Your custom scripts will be concatenated to one file `custom.js`.
   # When building for production it will be minified.
   # The file `custom.js` is loaded on each page (before body tag ends).
   dateFormat = "" # date format used to show dates on various pages. If nothing is specified, then "2 Jan 2006" format is used.
@@ -293,7 +296,7 @@ disqusShortname = ''
 
 ###################################################################
 
-# Allow to override `browserconfig.xml` params (configuration for windows embeded browsers)
+# Allow to override `browserconfig.xml` params (configuration for windows embedded browsers)
 [params.browserconfig]
   TileColor = "#2d89ef" # default windows 10 blue tile color
 
